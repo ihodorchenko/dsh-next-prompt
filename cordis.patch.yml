@@ -1,0 +1,19 @@
+# dsh-next-prompt bundle layer.
+#
+# Inserts the plugin row. The browser half declared by package.json's
+# `dsh.client` is served automatically by the client-module system; this patch
+# only mounts the Host half that collects the finished answer and asks the model
+# for suggested next prompts.
+#
+# All fields are optional; the defaults below match the README table. Remove a
+# line to fall back to the code default.
+- insert:
+    - id: next-prompt
+      name: dsh-next-prompt
+      config:
+        enabled: true
+        maxSuggestions: 3
+        showGhost: true
+        language: auto
+        model: ''
+        minAnswerChars: 40

@@ -1,0 +1,62 @@
+{
+  "name": "dsh-next-prompt",
+  "version": "0.1.0",
+  "description": "Suggested next prompts in the message field: after each answer, DeepSeek Harness proposes what to ask next, shown inside the composer and inserted with Tab.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-locale"
+      ],
+      "platform": "web"
+    },
+    "manifestVersion": 1
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ihodorchenko/dsh-next-prompt.git"
+  },
+  "homepage": "https://github.com/ihodorchenko/dsh-next-prompt#readme",
+  "bugs": {
+    "url": "https://github.com/ihodorchenko/dsh-next-prompt/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "deepseek",
+    "plugin",
+    "bundle",
+    "suggestions",
+    "next-prompt",
+    "composer"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "test": "node test/run.mjs"
+  }
+}

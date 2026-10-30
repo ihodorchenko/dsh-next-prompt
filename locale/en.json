@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Next Prompt",
+    "description": "Suggests the next message after each answer. The proposal appears in the message field; press Tab to insert it, Escape to dismiss."
+  }
+}
